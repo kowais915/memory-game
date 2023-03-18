@@ -1,5 +1,9 @@
 import {useState } from 'react';
 
+
+// importing components
+import Card from './components/Card'
+
 const images = [
   {"src": "/img/clock.jpg"},
   {"src": "/img/dome.jpg"},
@@ -28,9 +32,28 @@ const[turn, setTurn ] = useState(0)
   console.log(card, turn)
   return (
     <div className="App">
+      {/* navbar */}
       <div className="nav">
           <h1 className="title">Memory Game!</h1>
           <button className="btn" onClick={shuffle}>Reset Game</button>
+      </div>
+
+
+      {/* card grid */}
+      <div className="grid">
+
+        {card.map((item)=>{
+
+            return(
+              <Card
+                source = {item.src}
+              
+              />
+            )
+        })}
+
+
+
       </div>
       
 
