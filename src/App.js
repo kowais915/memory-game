@@ -1,5 +1,8 @@
 import {useState } from 'react';
 
+// importing styles
+import './styles/Card.css'
+
 
 // importing components
 import Card from './components/Card'
@@ -40,7 +43,7 @@ const[turn, setTurn ] = useState(0)
 
 
       {/* card grid */}
-      <div className="grid">
+      <div className="card-grid">
 
         {card.map((item)=>{
 
