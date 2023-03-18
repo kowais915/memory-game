@@ -6,3 +6,24 @@
   margin: 0;
   font-family: "Poppins";
 }
+
+body{
+  background-color: black;
+  
+}
+
+.title{
+  color: white;
+  margin-bottom: 5px;
+}
+
+.nav{
+  text-align: center;
+  margin-top: 30px;
+
+}
+
+.btn{
+  padding: 5px;
+  margin-top: 10px;
+}

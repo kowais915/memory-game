@@ -3,7 +3,12 @@
 function App() {
   return (
     <div className="App">
-      <h1>Memory Game!</h1>
+      <div className="nav">
+          <h1 className="title">Memory Game!</h1>
+          <button className="btn">Reset Game</button>
+      </div>
+      
+
     </div>
   );
 }
