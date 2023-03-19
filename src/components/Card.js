@@ -1,13 +1,17 @@
 import '../styles/Card.css'
 
 
-const Card = ({source, cover}) => {
-    console.log(cover)
+const Card = ({source, card, cover, handleChoice}) => {
+    
+    const handleClick = ( card ) => {
+        handleChoice(card)
+    }
+
     return ( 
         <div className="card">
             
                 <img className='front' src={source}/>
-                <img className='back' src={cover}/>
+                <img className='back' onClick={handleClick} src={cover}/>
             
         </div>
      );
@@ -15,3 +19,4 @@ const Card = ({source, cover}) => {
 
  
 export default Card;
+ 

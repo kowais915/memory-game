@@ -19,6 +19,9 @@ const images = [
 function App() {
 const [card, setCard ] = useState([])
 const[turn, setTurn ] = useState(0)
+const [choiceOne, setChoiceOne] = useState(null)
+const [choiceTwo, setChoiceTwo ] = useState(null)
+
 
 
   const shuffle = () =>{
@@ -33,6 +36,14 @@ const[turn, setTurn ] = useState(0)
   }
 
   console.log(card, turn)
+
+
+  const handleChoice = (card)=>{
+    console.log(card)
+  }
+
+
+
   return (
     <div className="App">
       {/* navbar */}
@@ -45,13 +56,15 @@ const[turn, setTurn ] = useState(0)
       {/* card grid */}
       <div className="card-grid">
 
-        {card.map((item)=>{
+        {card.map((card)=>{
 
             return(
               
                   <Card
-                    key={item.id}
-                    source = {item.src}
+                    handleChoice = {handleChoice}
+                    card={card}
+                    key={card.id}
+                    source = {card.src}
                     cover = {"../img/logo.png"}
                   />
               
