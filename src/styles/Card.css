@@ -1,9 +1,8 @@
 .card > img{
-    width: 230px;
-    height:220px;
+    width: 225px;
+    height:250px;
+    border-radius: 20px;
 
-    border-radius: 15px;
-    margin: 5px;
     
 }
 
@@ -14,6 +13,11 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 100px ;
-    padding-left: 50px;
-    padding-right: 50px;
+
+     /* margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0px;
+    padding-left: 30px;
+    padding-right: 5px; */
 }

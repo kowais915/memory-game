@@ -48,12 +48,13 @@ const[turn, setTurn ] = useState(0)
         {card.map((item)=>{
 
             return(
-              <div className="card-home" id={item.id}>
+              
                   <Card
+                    key={item.id}
                     source = {item.src}
                     cover = {"../img/logo.png"}
                   />
-              </div>
+              
             )
         })}
 
