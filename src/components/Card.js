@@ -3,7 +3,7 @@ import '../styles/Card.css'
 
 const Card = ({source, card, cover, handleChoice}) => {
     
-    const handleClick = ( card ) => {
+    const handleClick = (  ) => {
         handleChoice(card)
     }
 
@@ -16,7 +16,6 @@ const Card = ({source, card, cover, handleChoice}) => {
         </div>
      );
 }
-
  
 export default Card;
  
