@@ -5,7 +5,8 @@ import './styles/Card.css'
 
 
 // importing components
-import Card from './components/Card'
+import Card from './components/Card';
+import Navbar from './components/Navbar';
 
 const images = [
   {"src": "/img/clock.jpg"},
@@ -47,10 +48,8 @@ const [choiceTwo, setChoiceTwo ] = useState(null)
   return (
     <div className="App">
       {/* navbar */}
-      <div className="nav">
-          <h1 className="title">Memory Game!</h1>
-          <button className="btn" onClick={shuffle}>Reset Game</button>
-      </div>
+     
+      <Navbar shuffle={shuffle}/>
 
 
       {/* card grid */}
