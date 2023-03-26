@@ -1,0 +1,36 @@
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+li, a{
+    list-style-type: none;
+    text-decoration: none;
+    padding: 5px;
+}
+
+
+ul{
+    display: flex;
+    list-style: none;
+}
+
+button{
+    display: block;
+}
+
+
+.title{
+    color: white;
+    margin-bottom: 5px;
+    font-size: 30px;
+  }
+.links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
