@@ -9,12 +9,12 @@ import Card from './components/Card';
 import Navbar from './components/Navbar';
 
 const images = [
-  {"src": "/img/clock.jpg"},
-  {"src": "/img/dome.jpg"},
-  {"src": "/img/fcse.jpg"},
-  {"src": "/img/gate.jpg"},
-  {"src": "/img/lib.jpg"},
-  {"src": "/img/tuck.jpg"},
+  {"src": "/img/clock.jpg", match:false},
+  {"src": "/img/dome.jpg", match:false},
+  {"src": "/img/fcse.jpg", match:false},
+  {"src": "/img/gate.jpg", match:false},
+  {"src": "/img/lib.jpg", match:false},
+  {"src": "/img/tuck.jpg", match:false},
 ]
 
 function App() {
@@ -53,9 +53,30 @@ const [choiceTwo, setChoiceTwo ] = useState(null)
 useEffect(()=>{
 
   if (choiceOne && choiceTwo){
+
+    // if the two cards match
     if(choiceOne.src === choiceTwo.src){
-      console.log("match")
+
+      setCard(oldCard =>{
+        return(
+          oldCard.map((card)=>{
+            if (card.src === choiceOne.src){
+              return {...card, match: true}
+            }else{
+              return card
+            }
+          })
+        )
+      })
+
+
+      
+
+      // calling the reset function
       resetFunc()
+
+      // else if (choiceOne.src !== choiceTwo.src)
+
     }else{
       console.log("not match")
       resetFunc()
@@ -64,6 +85,7 @@ useEffect(()=>{
 
 }, [choiceOne, choiceTwo])
 
+console.log(card)
 
 
   const resetFunc = ()=>{
