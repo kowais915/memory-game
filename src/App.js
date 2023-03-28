@@ -1,4 +1,4 @@
-import {useState } from 'react';
+import {useState, useEffect } from 'react';
 
 // importing styles
 import './styles/Card.css'
@@ -25,6 +25,7 @@ const [choiceTwo, setChoiceTwo ] = useState(null)
 
 
 
+
   const shuffle = () =>{
     const shuffledCards = [...images, ...images]
       .sort(()=>{
@@ -36,7 +37,10 @@ const [choiceTwo, setChoiceTwo ] = useState(null)
       setTurn(0)
   }
 
-  console.log(card, turn)
+
+
+
+
 
 
   const handleChoice = (card)=>{
@@ -44,6 +48,31 @@ const [choiceTwo, setChoiceTwo ] = useState(null)
   }
 
 
+  // useEffect hook
+
+useEffect(()=>{
+
+  if (choiceOne && choiceTwo){
+    if(choiceOne.src === choiceTwo.src){
+      console.log("match")
+      resetFunc()
+    }else{
+      console.log("not match")
+      resetFunc()
+    }
+  }
+
+}, [choiceOne, choiceTwo])
+
+
+
+  const resetFunc = ()=>{
+    setChoiceOne(null)
+    setChoiceTwo(null)
+    setTurn((old)=>{
+      return old + 1
+    })
+  }
 
   return (
     <div className="App">
