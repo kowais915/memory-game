@@ -3,7 +3,7 @@ import '../styles/Navbar.css'
 const Navbar = ({shuffle, turns, score}) => {
     return (
             <div className="nav">
-                <h1 className="title">Memory Game!</h1>
+                {/* <h1 className="title">Memory Game!</h1> */}
 
                 <div className='links'>
                     <ul>

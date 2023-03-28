@@ -111,6 +111,10 @@ console.log(card)
         score = {score}
         
       />
+      
+      <div className="title">
+        <h1>Memory Game</h1>
+      </div>
 
 
       {/* card grid */}
