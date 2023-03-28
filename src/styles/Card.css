@@ -1,24 +1,38 @@
 .card > img{
-    width: 220px;
-    height:250px;
+    max-width: 200px;
+    max-height: 300px;
     border-radius: 20px;
-    
+   
     
 }
 
+
+/* .card > .back{
+    max-width: 150px;
+    max-height: 200px;
+} */
+
+
+.front{
+    margin: 1.3em;
+}
 /* styling the grid */
 
 .card-grid{
+    /* padding: 1.2em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 100px ;
-   
+    margin-top: 100px ; */
+   padding: 3.2em;
 
-     /* margin-top: 40px;
+    margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 0px;
-    padding-left: 30px;
-    padding-right: 5px; */
+    grid-gap: -2em;
+   
+}
+
+.eachCard{
+   
 }

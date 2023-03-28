@@ -59,13 +59,15 @@ const [choiceTwo, setChoiceTwo ] = useState(null)
 
             return(
               
-                  <Card
+                  <div className="eachCard">
+                      <Card
                     handleChoice = {handleChoice}
                     card={card}
                     key={card.id}
                     source = {card.src}
                     cover = {"../img/logo.png"}
                   />
+                  </div>
               
             )
         })}

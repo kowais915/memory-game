@@ -15,6 +15,7 @@
     justify-content: space-between;
     margin: 10px;
     padding: 10px;
+    
   }
 
   ul{
@@ -29,4 +30,5 @@
     text-decoration: none;
     color: white;
     font-size: 20px;
+    transition: 0.5s;
   }
