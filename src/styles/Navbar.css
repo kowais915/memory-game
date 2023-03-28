@@ -32,3 +32,9 @@
     font-size: 20px;
     transition: 0.5s;
   }
+
+  .turns{
+    color: white;
+    margin-top: auto;
+    margin-bottom: 6px;
+  }

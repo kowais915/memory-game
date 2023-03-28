@@ -1,6 +1,6 @@
 import '../styles/Navbar.css'
 
-const Navbar = ({shuffle}) => {
+const Navbar = ({shuffle, turns, score}) => {
     return (
             <div className="nav">
                 <h1 className="title">Memory Game!</h1>
@@ -13,6 +13,14 @@ const Navbar = ({shuffle}) => {
                     </ul>
                    
 
+                </div>
+
+                <div className='turns'>
+                    <p>Turns: {turns}</p>
+                </div>
+
+                <div className='turns'>
+                    <p>Score: {score}</p>
                 </div>
 
                 <button className="btn" onClick={shuffle}>New Game</button>

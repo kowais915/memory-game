@@ -22,6 +22,7 @@ const [card, setCard ] = useState([])
 const[turn, setTurn ] = useState(0)
 const [choiceOne, setChoiceOne] = useState(null)
 const [choiceTwo, setChoiceTwo ] = useState(null)
+const [score, setScore] = useState(0)
 
 
 
@@ -69,6 +70,10 @@ useEffect(()=>{
         )
       })
 
+      setScore((old)=>{
+        return old + 1
+      })
+
 
       
 
@@ -100,7 +105,12 @@ console.log(card)
     <div className="App">
       {/* navbar */}
      
-      <Navbar shuffle={shuffle}/>
+      <Navbar 
+        shuffle={shuffle} 
+        turns = {turn}
+        score = {score}
+        
+      />
 
 
       {/* card grid */}
