@@ -1,4 +1,4 @@
-.card > img{
+.card > div> img{
     max-width: 200px;
     max-height: 300px;
     border-radius: 20px;
@@ -33,6 +33,12 @@
    
 }
 
-.eachCard{
+ .card .front{
+    transform: rotateY(90deg);
+    position: relative;
+ }
+
+ .flipped .front{
+    transform: rotateY(0deg);
    
-}
+ }

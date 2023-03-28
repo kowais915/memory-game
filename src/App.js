@@ -117,6 +117,7 @@ console.log(card)
                     key={card.id}
                     source = {card.src}
                     cover = {"../img/logo.png"}
+                    flipped = {card.match || card === choiceOne || card === choiceTwo}
                   />
                   </div>
               

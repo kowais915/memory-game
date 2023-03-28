@@ -1,7 +1,7 @@
 import '../styles/Card.css'
 
 
-const Card = ({source, card, cover, handleChoice}) => {
+const Card = ({source, card, cover, handleChoice, flipped}) => {
     
     const handleClick = (  ) => {
         handleChoice(card)
@@ -10,9 +10,14 @@ const Card = ({source, card, cover, handleChoice}) => {
     return ( 
         <div className="card">
             
-                <img className='front' src={source}/>
-                <img className='back' onClick={handleClick} src={cover}/>
-            
+                <div className={flipped ? "flipped": ""}>
+                    
+                    <img className='front' src={source}/>
+                    <img className='back' onClick={handleClick} src={cover}/>
+
+                </div>
+                    
+              
         </div>
      );
 }
