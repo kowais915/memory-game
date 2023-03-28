@@ -36,6 +36,7 @@ const [score, setScore] = useState(0)
 
       setCard(shuffledCards)
       setTurn(0)
+      setScore(0)
   }
 
 
